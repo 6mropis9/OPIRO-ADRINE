@@ -1,0 +1,10 @@
+# get_chat_id.py
+
+from telegram import Bot
+from config import TELEGRAM_TOKEN
+
+bot = Bot(token=TELEGRAM_TOKEN)
+updates = bot.get_updates()
+
+for update in updates:
+    print("Chat ID:", update.message.chat.id)
